@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Fontaine de Trévi - Exposé</title>
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Animation des couleurs pour tout l’exposé */
+@keyframes changeColor {
+    0%   { background-color: #2b438d; } 
+    25%  { background-color: #1163af; } 
+    50%  { background-color: #086f81; } 
+    75%  { background-color: #1163af; } 
+    100% { background-color: #2b438d; } 
+}
+
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    animation: changeColor 10s linear infinite;
+}
+
+/* Loader avec fond noir */
+.loader-screen {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    background-color: #1163af; 
+    color:white;
+    transition: opacity 1s ease;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top:20px;
+}
+
+.progress {
+    height:100%;
+    width:0%;
+    background: linear-gradient(90deg,#18b420, #3fd444);
+    transition: width 0.2s;
+}
+
+.percentage {
+    margin-top: 14px;
+    font-size: 26px;
+}
+
+/* Galerie images */
+.galerie {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.galerie img {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+/* Texte et images centrés */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Slider images */
+.slider {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    margin: 40px auto; /* centre horizontalement */
+    display: block;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 21s infinite ease-in-out;
+}
+
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 7s; }
+.slider img:nth-child(3) { animation-delay: 14s; }
+
+@keyframes fade {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    30% { opacity: 1; }
+    38% { opacity: 0; }
+    100% { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+<!-- Écran de chargement -->
+<div class="loader-screen" id="loader">
+    <div>Bonjour à tous</div>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="percentage" id="percentage">0%</div>
+</div>
+
+<h1>Fontana di Trevi</h1>
+
+<h2>Introduction</h2>
+<p>Aujourd’hui, je vais vous présenter la fontaine de Trévi, l’un 
+des monuments les plus célèbres de Rome et même du monde. Située
+au cœur de la ville, cette fontaine impressionne par sa taille,
+sa richesse artistique et son histoire. Construite au XVIIIᵉ
+siècle, elle est connue non seulement pour sa beauté, mais 
+aussi pour la tradition populaire. À travers cet exposé,
+nous allons découvrir :</p>
+
+<ol>
+<li>Pourquoi elle s'appelle comme ça</li>
+<li>Les deux traditions de cette fontaine</li>
+<li>Comment faire la première tradition correctement</li>
+<li>Sa construction et son design</li>
+<li>Une conclusion</li>
+</ol>
+
+<h2>D'où vient le nom Fontaine de Trévi (Fontana di Trevi) ?</h2>
+<p>Il y a différentes hypothèses sur l’origine du nom de la fontaine la plus 
+célèbre de la Ville Éternelle. La plus réaliste est que le nom dérive
+de « trivium », c’est-à-dire le croisement entre trois rues. 
+La deuxième hypothèse est que "Trivia" est un nom associé à Diane, déesse liée aux
+carrefours et aux lieux sacrés. Cette hypothèse est surtout symbolique ou religieuse
+et repose sur des interprétations tardives et des traditions locales.
+La troisième hypothèse fait référence à Juturne, la nymphe 
+invoquée pendant la sécheresse et qui avait un temple appelé 
+« Trevi ». Aucune preuve ne montre que ce temple s’appelait bien ainsi,
+mais cette hypothèse reste ma préférée.</p>
+
+<h2>Quelle est la tradition de cette fontaine ?</h2>
+<p>La tradition la plus connue de cette fontaine est que si vous lancez une pièce dans l’eau de la fontaine de Trévi,
+vous retournerez à Rome et cela vous portera chance.</p>
+<p>Si vous en lancez deux, vous tomberez amoureux ou amoureuse
+d’un Italien ou d’une Italienne.</p>
+<p>Si vous en lancez trois, à l’amour s’ajoutera le mariage !</p>
+<p>L'argent qui est jeté est redonné à des œuvres caritatives : environ 1,5 million d'euros par an.</p>
+
+<h3>Personne qui lance une pièce</h3>
+<div class="galerie">
+    <img src="97edd3cec65f34349508a58e4b1c8491.jpg" alt="Personne qui lance une pièce dans la fontaine de Trévi">
+    <img src="How_to_toss_a_coin_into_Trevi_Fountain_in_Rome_private_excursions.jpg" alt="Personne qui lance une pièce dans la fontaine de Trévi">
+    <img src="trevi-coin-tossing.webp" alt="Personne qui lance une pièce dans la fontaine de Trévi">
+</div>
+
+<h3>Comment faire correctement le lancer</h3>
+<p>Attention, pas n’importe quel lancer ! On voit bien sur les photos qu’il y a plusieurs 
+points communs. Les règles pour que le lancer soit correct sont très strictes :</p>
+<p>Il faut tourner le dos à la fontaine de Trévi et jeter votre pièce dans le bassin
+de la main droite par-dessus votre épaule gauche.</p>
+
+<h2>Autre tradition</h2>
+<p>L’autre tradition, aujourd’hui presque disparue, est celle du verre.
+Autrefois, lorsque les jeunes hommes devaient partir travailler loin ou pour 
+le service militaire, leurs fiancées leur faisaient boire l’eau de la fontaine
+dans un verre neuf, puis le cassaient elles-mêmes. Cet acte symbolisait un
+pacte de fidélité éternelle.</p>
+<p>Aujourd’hui, il existe une autre version : les deux amoureux
+boivent ensemble à la « Fontanina degli innamorati » située à droite du
+monument. C’est une façon de s’assurer de rester fidèles pour toujours.</p>
+
+<h2>Sa construction</h2>
+<p>La Fontaine de Trévi se situe à Rome et marque l’arrivée de l’ancien aqueduc Aqua Virgo,
+construit à l’époque de l’empereur Auguste. Au XVIIIᵉ siècle,
+les papes souhaitent transformer l’ancienne fontaine terminale en un monument spectaculaire
+reflétant la puissance artistique de Rome.</p>
+<p>Le pape Clément XII lance un concours pour ériger une grande fontaine monumentale.
+L’architecte Nicola Salvi remporte le concours et commence les travaux. 
+Il crée un décor théâtral typique du baroque romain.</p>
+<p>La fontaine est réalisée principalement en travertin, pierre extraite près de Tivoli.
+Les travaux sont complexes et coûteux, ralentis par des problèmes financiers et techniques.
+Nicola Salvi meurt avant la fin du chantier.
+La fontaine est achevée en 1762 par l’architecte Giuseppe Pannini sous le pontificat de Clément XIII.</p>
+
+<h2>Le design de la fontaine de Trévi</h2>
+<p>Dans la niche principale, nous pouvons voir le dieu de l’Océan, Océanus.
+À ses côtés, deux hippocampes, mi-cheval mi-poisson, incarnent les deux visages changeants de la mer :
+l’un fougueux, l’autre apaisé. Ces créatures sont maîtrisées par deux tritons, figures mythologiques
+messagères des dieux de la mer. Ce duo allégorique illustre les humeurs instables de la nature,
+oscillant entre tempête et calme.</p>
+
+<h2>Les statues de la fontaine de Trévi</h2>
+<div class="galerie">
+    <img src="Sans titre.jpg" alt="Statue d’Océanus">
+    <img src="statue-de-la-fontaine-de-trevi-a-rome-italie-un-triton-a-la-tete-d-un-cheval-de-mer-tirant-le-char-de-oceanus-pd92ka.jpg" alt="Triton de la fontaine">
+    <img src="Sans tzitre.jpg" alt="Statue de la fontaine">
+</div>
+
+<p>En levant les yeux vers le sommet de la fontaine de Trévi, on distingue le blason du pape Clément XII.
+Ce blason est intégré à la façade du palais Poli, qui sert de décor architectural à l’ensemble.
+Les statues situées dans les niches supérieures sont celles de 
+l’Abondance et de la Salubrité, deux figures allégoriques liées aux bienfaits de l’eau.</p>
+
+<p>La fontaine célèbre avant tout l’importance de l’eau potable apportée à Rome par l’aqueduc antique.
+Prenez le temps d’observer les détails, les courbes, les couleurs et les reflets des sculptures en 
+marbre et travertin. Quand la nuit tombe, les jeux de lumière et le mouvement de l’eau
+donnent l’impression que les bas-reliefs s’animent.</p>
+
+<p>Hauteur : environ 26 mètres<br>
+Largeur : environ 49 mètres<br>
+C’est la plus grande fontaine baroque de Rome.</p>
+
+<h2>Galerie photos</h2>
+<div class="galerie">
+    <img src="pieces-fontaine-trevi-rome-1.jpg" alt="Pièces dans la fontaine de Trévi">
+    <img src="istockphoto-650699268-612x612.jpg" alt="Fontaine de Trévi en journée">
+    <img src="medium_La Fontaine de Trevi_Italie_123RF_9528.jpg" alt="Fontaine de Trévi de nuit">
+</div>
+
+<h2>La phrase de la fontaine</h2>
+<p>La fontaine a une phrase écrite au-dessus de la niche principale :  
+<b>PERFECIT BENEDICTUS XIV PONT. MAX.</b>  
+Cela signifie : « Benoît XIV, souverain pontife, a achevé la fontaine de Trévi ».  
+Elle fait référence au pape Benoît XIV, sous dont le pontificat la fontaine fut terminée.</p>
+
+<h2>Conclusion</h2>
+<p>Cette fontaine n’est pas qu’une fontaine ordinaire, mais un monument extraordinaire avec une longue histoire,
+des traditions uniques et une architecture magnifique qui attire des millions de touristes chaque année.</p>
+
+<script>
+// Script du chargement placé à la fin
+let progress = 0;
+const progressBar = document.getElementById("progress");
+const percentageText = document.getElementById("percentage");
+const loader = document.getElementById("loader");
+
+function updateLoading() {
+    if (progress <= 100) {
+        progressBar.style.width = progress + "%";
+        percentageText.textContent = progress + "%";
+        progress++;
+        setTimeout(updateLoading, 30);
+    } else {
+        loader.style.opacity = 0;
+        setTimeout(() => { loader.style.display = "none"; }, 1000);
+    }
+}
+
+updateLoading();
+</script>
+
+<div class="slider">
+  <!-- Images publiques libres -->
+  <img src="1.PNG" alt="Statue fontaine de Trévi">
+  <img src="Capture.PNG" alt="Écriture fontaine de Trévi">
+  <img src="Captusre.PNG" alt="Fontaine de Trévi de nuit">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+h1{
+    text-decoration: underline #e42020;
+    text-align: center;
+    color: #e42020;
+     font-size: 128px;
+       font-family: 'Times New Roman', Times, serif;
+
+}
+
+azetr{
+       text-align: center;
+    color: #ccae05;
+     font-size: 128px;
+       font-family: 'Times New Roman', Times, serif;
+
+
+
+}
+ret{
+    text-align: center;
+
+}
+
+p{
+    font-size: 32px ;
+      font-family: 'Times New Roman', Times, serif;
+    
+}
+
+h2{
+    font-size: 50px ;
+    color: #e2764e;
+      font-family: 'Times New Roman', Times, serif;
+}
+    
+h3{
+    font-size: 50px ;
+    color: #e2764e;
+      font-family: 'Times New Roman', Times, serif;
+}
+
+
+BODY{
+    color: #ccae05;
+     font-family: 'Times New Roman', Times, serif; /* police serif classique */
+}
+div{
+    font-size: 99px;
+    color: #ccae05;
+     font-family: 'Times New Roman', Times, serif; /* police serif classique */
+}
+a{
+    font-size: 32px;
+      font-family: 'Times New Roman', Times, serif;
+}
+di{
+     
+    font-family: 'Times New Roman', Times, serif;
+}
+
+BRE{
+    color: #000000;
+      font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-size: 32px;
+      font-family: 'Times New Roman', Times, serif;
+}
+ol{
+    font-size: 32px;
+      font-family: 'Times New Roman', Times, serif;
+}
+
